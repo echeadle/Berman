@@ -1,9 +1,11 @@
 import autogen
+import getpass
 
+OPENAI_API_KEY = getpass.getpass("Enter you api key: ")
 config_list = [
     {
         'model': 'gpt-3.5-turbo-16k',
-        'api_key': 'sk-1111'
+        'api_key': OPENAI_API_KEY
     }
 ]
 
