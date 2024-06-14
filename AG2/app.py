@@ -56,3 +56,9 @@ chat_res = user_proxy.initiate_chat(
     summary_method="reflection_with_llm",
 )
 
+user_proxy.send(
+    recipient=assistant,
+    message="""Plot a chart of their stock price change YTD
+    and save to stock_price_ytd.png
+    """
+)
