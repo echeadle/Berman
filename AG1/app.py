@@ -31,7 +31,7 @@ def termination_msg(x):
 
 user_proxy = UserProxyAgent(
     name="user_proxy",
-    human_input_mode="TERMINATE",  # "ALWAYS", "TERMINATE", "NEVER"
+    human_input_mode="NEVER",  # "ALWAYS", "TERMINATE", "NEVER"
     max_consecutive_auto_reply=10,
     is_termination_msg=termination_msg,
     code_execution_config={"work_dir": "web", "use_docker": "python:bullseye"},
