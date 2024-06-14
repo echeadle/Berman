@@ -8,11 +8,11 @@ dotenv_path = join(dirname(__file__), ".env")
 load_dotenv(dotenv_path)
 
 config_list = [
-    {"model": "gpt-3.5-turbo-16k", "api-key": os.environ.get("OPENAI_API_KEY")}
+    {"model": "gpt-3.5-turbo-16k", "api_key": os.environ.get("OPENAI_API_KEY")}
 ]
 
 llm_config = {
-    "request_timeout": 600,
+    "timeout": 600,
     "seed": 42,
     "config_list": config_list,
     "temperature": 0,  # For Coding, 0 is good
@@ -34,7 +34,7 @@ user_proxy = UserProxyAgent(
     human_input_mode="TERMINATE",  # "ALWAYS", "TERMINATE", "NEVER"
     max_consecutive_auto_reply=10,
     is_termination_msg=termination_msg,
-    code_execution_config={"work_dir": "web"},
+    code_execution_config={"work_dir": "web", "use_docker": "python:bullseye"},
     system_message="""Reply TERMINATE if the task has been solved at full satisfaction.
 Otherwise, reply CONTINUE, or the reason why the task is not solved yet.""",
 )
