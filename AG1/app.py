@@ -39,6 +39,10 @@ user_proxy = UserProxyAgent(
 Otherwise, reply CONTINUE, or the reason why the task is not solved yet.""",
 )
 
+task = """
+Write python code to output numbers 1 to 100, and then store the code in a file
+"""
+
 user_proxy.initiate_chat(assistant, message=task)
 
 task2 = """
