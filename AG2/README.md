@@ -9,3 +9,8 @@ https://microsoft.github.io/autogen/docs/notebooks/agentchat_auto_feedback_from_
 
 **Libraries**
 pip install pyautogen matplotlib yfinance IPython
+
+**Example Task: Literature Survey*
+This is a second example in the YT video
+
+https://microsoft.github.io/autogen/docs/notebooks/agentchat_teaching
